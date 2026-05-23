@@ -90,11 +90,11 @@ const Contact = () => {
                   <FaGithub className="text-4xl text-gray-400 group-hover/link:text-white mb-3 transition-colors" />
                   <span className="font-orbitron text-sm text-gray-400 group-hover/link:text-iron-cyan transition-colors">GitHub</span>
                 </a>
-                <a href="#" className="flex flex-col items-center justify-center p-6 bg-iron-black/40 rounded-lg border border-white/5 hover:border-[#0A66C2] hover:shadow-[0_0_15px_#0A66C2] transition-all duration-300 group/link">
+                <a href="#" onClick={(e) => e.preventDefault()} className="flex flex-col items-center justify-center p-6 bg-iron-black/40 rounded-lg border border-white/5 hover:border-[#0A66C2] hover:shadow-[0_0_15px_#0A66C2] transition-all duration-300 group/link">
                   <FaLinkedin className="text-4xl text-gray-400 group-hover/link:text-[#0A66C2] mb-3 transition-colors" />
                   <span className="font-orbitron text-sm text-gray-400 group-hover/link:text-[#0A66C2] transition-colors">LinkedIn</span>
                 </a>
-                <a href="#" className="flex flex-col items-center justify-center p-6 bg-iron-black/40 rounded-lg border border-white/5 hover:border-[#1DBF73] hover:shadow-[0_0_15px_#1DBF73] transition-all duration-300 group/link">
+                <a href="#" onClick={(e) => e.preventDefault()} className="flex flex-col items-center justify-center p-6 bg-iron-black/40 rounded-lg border border-white/5 hover:border-[#1DBF73] hover:shadow-[0_0_15px_#1DBF73] transition-all duration-300 group/link">
                   <SiFiverr className="text-4xl text-gray-400 group-hover/link:text-[#1DBF73] mb-3 transition-colors" />
                   <span className="font-orbitron text-sm text-gray-400 group-hover/link:text-[#1DBF73] transition-colors">Fiverr</span>
                 </a>
