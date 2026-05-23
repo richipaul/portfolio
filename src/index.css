@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  --color-iron-red: #B11313;
+  --color-iron-gold: #D4AF37;
+  --color-iron-black: #0A0A0A;
+  --color-iron-dark: #111827;
+  --color-iron-cyan: #00F5FF;
+  --color-iron-blue: #4FD1FF;
+
+  --animate-pulse-glow: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px var(--color-iron-cyan));
+  }
+  50% {
+    opacity: .5;
+    filter: drop-shadow(0 0 20px var(--color-iron-blue));
+  }
+}
+
+:root {
+  background-color: var(--color-iron-black);
+  color: white;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+  cursor: none; /* For custom cursor */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-iron-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-iron-red);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-iron-gold);
+}
+
+.glass-panel {
+  @apply bg-iron-dark/50 backdrop-blur-md border border-white/10 shadow-lg;
+}
+
+.glow-text {
+  text-shadow: 0 0 10px var(--color-iron-cyan);
+}
+
+.glow-border {
+  box-shadow: 0 0 15px var(--color-iron-cyan);
+}
