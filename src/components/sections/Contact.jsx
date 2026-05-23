@@ -86,7 +86,7 @@ const Contact = () => {
             <div className="glass-panel p-8 rounded-2xl relative group hover:border-iron-blue transition-colors duration-300">
               <h3 className="text-2xl font-orbitron text-iron-blue mb-8 glow-text">Network Nodes</h3>
               <div className="grid grid-cols-2 gap-6">
-                <a href="#" className="flex flex-col items-center justify-center p-6 bg-iron-black/40 rounded-lg border border-white/5 hover:border-iron-cyan hover:shadow-[0_0_15px_#00F5FF] transition-all duration-300 group/link">
+                <a href="https://github.com/richipaul" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center p-6 bg-iron-black/40 rounded-lg border border-white/5 hover:border-iron-cyan hover:shadow-[0_0_15px_#00F5FF] transition-all duration-300 group/link">
                   <FaGithub className="text-4xl text-gray-400 group-hover/link:text-white mb-3 transition-colors" />
                   <span className="font-orbitron text-sm text-gray-400 group-hover/link:text-iron-cyan transition-colors">GitHub</span>
                 </a>
