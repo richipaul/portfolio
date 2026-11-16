@@ -14,7 +14,7 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-orbitron font-bold text-white mb-4">
-            <span className="text-iron-cyan">05.</span> Establish Uplink
+            <span className="text-iron-cyan">06.</span> Establish Uplink
           </h2>
           <div className="w-24 h-1 bg-iron-cyan mx-auto rounded-full shadow-[0_0_10px_#00F5FF]"></div>
         </motion.div>

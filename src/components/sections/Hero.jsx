@@ -1,42 +1,42 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+const roles = ["Frontend Developer", "Freelancer", "Problem Solver"];
+
 const Hero = () => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const roles = ["Frontend Developer", "Freelancer", "Problem Solver"];
-
   useEffect(() => {
+    const tick = () => {
+      let i = loopNum % roles.length;
+      let fullText = roles[i];
+      let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+
+      setText(updatedText);
+
+      if (isDeleting) {
+        setTypingSpeed(prevSpeed => prevSpeed / 2);
+      }
+
+      if (!isDeleting && updatedText === fullText) {
+        setIsDeleting(true);
+        setTypingSpeed(1000); // Pause at end
+      } else if (isDeleting && updatedText === '') {
+        setIsDeleting(false);
+        setLoopNum(prev => prev + 1);
+        setTypingSpeed(150);
+      }
+    };
+
     let ticker = setInterval(() => {
       tick();
     }, typingSpeed);
 
     return () => clearInterval(ticker);
-  }, [text, isDeleting, typingSpeed]);
-
-  const tick = () => {
-    let i = loopNum % roles.length;
-    let fullText = roles[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setTypingSpeed(prevSpeed => prevSpeed / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setTypingSpeed(1000); // Pause at end
-    } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setTypingSpeed(150);
-    }
-  };
+  }, [text, isDeleting, typingSpeed, loopNum]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">

@@ -36,7 +36,7 @@ const Services = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-orbitron font-bold text-white mb-4">
-            <span className="text-iron-gold">04.</span> Protocol Services
+            <span className="text-iron-gold">05.</span> Protocol Services
           </h2>
           <div className="w-24 h-1 bg-iron-gold mx-auto rounded-full shadow-[0_0_10px_#D4AF37]"></div>
         </motion.div>
